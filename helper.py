@@ -2,6 +2,7 @@ import pandas as pd
 import operator
 
 
+
 # Importar los data sets a utilizar
 df_developer = pd.read_parquet('data/contenido_free_items.parquet')
 df_reviews = pd.read_parquet('data/user_reviews_clean.parquet')

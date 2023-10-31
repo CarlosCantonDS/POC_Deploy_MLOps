@@ -1,6 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.responses import HTMLResponse
 import helper as hp
+
+import importlib
+importlib.reload(hp)
 
 app = FastAPI()
 
@@ -11,8 +14,17 @@ def home():
     
     return "HOLAMUNDO"
 
-@app.get(path = '/developer')
-def developer(desarrollador:str):
+@app.get(path = '/developer',
+          description = """ <font color="blue">
+                        1. Haga clik en "Try it out".<br>
+                        2. Ingrese el nombre del desarrollador en el box abajo.<br>
+                        3. Scrollear a "Resposes" para ver la cantidad de items y porcentaje de contenido Free por año de ese desarrollador.
+                        </font>
+                        """,
+         tags=["Consultas Generales"])
+def developer(desarrollador: str = Query(..., 
+                            description="Desarrollador del videojuego", 
+                            example='Valve')):
     return hp.developer_info(desarrollador)
 
 

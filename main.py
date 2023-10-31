@@ -9,7 +9,7 @@ app = FastAPI()
          tags=["index"])
 def index():
     
-    return "Proyecto MLOps - CarlosCantonDS  - Ingresar por favor a la ruta /Docs para consumir la API"
+    return "Proyecto MLOps - CarlosCantonDS  - Ingresar por favor a la ruta /docs para consumir la API"
 
 
 @app.get(path = '/developer')

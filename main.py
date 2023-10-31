@@ -6,8 +6,8 @@ app = FastAPI()
 
 @app.get(path="/", 
          response_class=HTMLResponse,
-         tags=["Home"])
-def home():
+         tags=["index"])
+def index():
     
     return "HOLAMUNDO"
 

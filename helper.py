@@ -3,7 +3,7 @@ import operator
 
 
 # Importar los data sets a utilizar
-df_developer = pd.read_parquet('data/contenido_free_items.parquet')
+df_developer = pd.read_parquet('contenido_free_items.parquet')
 # df_reviews = pd.read_parquet('data/user_reviews_clean.parquet')
 # df_user_data = pd.read_parquet('data/user_data_price.parquet')
 # df_user_genre = pd.read_parquet('data/user_for_genre.parquet')
